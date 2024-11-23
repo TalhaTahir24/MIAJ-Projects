@@ -1,0 +1,25 @@
+
+## 🌐 Network Diagram
+
+Below is the network diagram showcasing the architecture of the project:
+
+![Network Diagram](diagram.png)
+
+## 🐳 Services Overview
+
+### 1️⃣ **Web Service**
+- Built using **Nginx**.
+- Serves a simple static HTML page with a black neon theme.
+- Accessible at `http://localhost:8080`.
+
+### 2️⃣ **App Service**
+- Built using **Python (Flask)**.
+- Returns a dynamic "Hello" message in neon style.
+- Accessible at `http://localhost:5000`.
+
+### 🔧 How to Run the Project
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd project
