@@ -1,0 +1,27 @@
+---
+  app:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    container_name: app-service
+    restart: always
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.app.rule=Host(`app.localhost`)"
+      - "traefik.http.services.app.loadbalancer.server.port=5000"
+      - "traefik.http.routers.app.entrypoints=web"
+      - "traefik.http.routers.app.tls.certresolver=myresolver"
+    volumes:
+      - app_data:/app/data
+    networks:
+      - proxy
+    environment:
+      - FLASK_APP=app.py
+    depends_on:
+      - traefik
+
+volumes:
+  web_data:
+    driver: local
+  app_data:
+    driver: local

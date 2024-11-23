@@ -1,0 +1,44 @@
+/* Basic styles for the page */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: black;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+canvas {
+    display: block;
+}
+
+.intro {
+    color: white;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    max-width: 500px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.devops-info h2 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.devops-info p {
+    font-size: 1rem;
+}
